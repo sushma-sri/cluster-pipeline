@@ -5,7 +5,7 @@ pipeline {
       steps {
         withAWS(region: 'ap-southeast-2', credentials: 'aws-static') {
           sh 'echo "Create a kubectl configuration file"'
-          sh '/usr/local/bin/aws eks --region ap-southeast-2 update-kubeconfig --name capstonecluster'
+          sh '/home/jenkins/.local/bin/aws eks --region ap-southeast-2 update-kubeconfig --name capstonecluster'
         }
 
       }
